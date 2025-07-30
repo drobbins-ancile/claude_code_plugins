@@ -1,0 +1,19 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit|MultiEdit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(cs)$' | xargs -r csharpier format || exit 2" // Format C# files
+                    },
+                    {
+                        "type": "command",
+                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r ruff format || exit 2" // Format Python files
+                    }
+                ]
+            }
+        ]
+    }
+}
