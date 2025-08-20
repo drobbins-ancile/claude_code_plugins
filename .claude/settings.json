@@ -6,11 +6,11 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(cs)$' | xargs -r csharpier format || exit 2" // Format C# files
+                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(cs)$' | xargs -r csharpier format || exit 2"
                     },
                     {
                         "type": "command",
-                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r ruff format || exit 2" // Format Python files
+                        "command": "jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r ruff format || exit 2"
                     }
                 ]
             }
