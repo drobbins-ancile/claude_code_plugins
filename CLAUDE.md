@@ -42,16 +42,6 @@ When asked to do something, just do it - including obvious follow-up actions nee
 - YAGNI. The best code is no code. Don't add features we don't need right now.
 - When it doesn't conflict with YAGNI, architect for extensibility and flexibility.
 
-
-## Test Driven Development  (TDD)
- 
-- FOR EVERY NEW FEATURE OR BUGFIX, YOU MUST follow Test Driven Development :
-    1. Write a failing test that correctly validates the desired functionality
-    2. Run the test to confirm it fails as expected
-    3. Write ONLY enough code to make the failing test pass
-    4. Run the test to confirm success
-    5. Refactor if needed while keeping tests green
-
 ## Writing code
 
 - When submitting work, verify that you have FOLLOWED ALL RULES. (See Rule #1)
@@ -89,23 +79,13 @@ When asked to do something, just do it - including obvious follow-up actions nee
  - YOU MUST NEVER remove code comments unless you can PROVE they are actively false. Comments are important documentation and must be preserved.
  - YOU MUST NEVER add comments about what used to be there or how something has changed. 
  - YOU MUST NEVER refer to temporal context in comments (like "recently refactored" "moved") or code. Comments should be evergreen and describe the code as it is. If you name something "new" or "enhanced" or "improved", you've probably made a mistake and MUST STOP and ask me what to do.
- - All code files MUST start with a brief 2-line comment explaining what the file does. Each line MUST start with "ABOUTME: " to make them easily greppable.
-
-  Examples:
-  // BAD: This uses Zod for validation instead of manual checking
-  // BAD: Refactored from the old validation system
-  // BAD: Wrapper around MCP tool protocol
-  // GOOD: Executes tools with validated arguments
-
-  If you catch yourself writing "new", "old", "legacy", "wrapper", "unified", or implementation details in names or comments, STOP and find a better name that describes the thing's
-  actual purpose.
 
 ## Version Control
 
 - If the project isn't in a git repo, STOP and ask permission to initialize one.
 - YOU MUST STOP and ask how to handle uncommitted changes or untracked files when starting work.  Suggest committing existing work first.
 - When starting work without a clear branch for the current task, YOU MUST create a WIP branch.
-- YOU MUST ALWAYS ask the Human to provide a name branches.
+- YOU MUST ALWAYS ask the Human to provide a name for branches.
 - YOU MUST TRACK All non-trivial changes in git.
 - YOU MUST commit frequently throughout the development process, even if your high-level tasks are not yet done. Commit your journal entries.
 - NEVER SKIP, EVADE OR DISABLE A PRE-COMMIT HOOK
@@ -114,9 +94,9 @@ When asked to do something, just do it - including obvious follow-up actions nee
 ## Testing
 
 - ALL TEST FAILURES ARE YOUR RESPONSIBILITY, even if they're not your fault. The Broken Windows theory is real.
-- Never delete a test because it's failing. Instead, raise the issue with Jesse. 
+- Never delete a test because it's failing. Instead, raise the issue with the Human. 
 - Tests MUST comprehensively cover ALL functionality. 
-- YOU MUST NEVER write tests that "test" mocked behavior. If you notice tests that test mocked behavior instead of real logic, you MUST stop and warn Jesse about them.
+- YOU MUST NEVER write tests that "test" mocked behavior. If you notice tests that test mocked behavior instead of real logic, you MUST stop and warn the Human about them.
 - YOU MUST NEVER implement mocks in end to end tests. We always use real data and real APIs.
 - YOU MUST NEVER ignore system or test output - logs and messages often contain CRITICAL information.
 - Test output MUST BE PRISTINE TO PASS. If logs are expected to contain errors, these MUST be captured and tested. If a test is intentionally triggering an error, we *must* capture and validate that the error output is as we expect
