@@ -1,0 +1,46 @@
+{
+  "name": "Dave Robbins' Claude Code Plugins",
+  "owner": {
+    "name": "Dave Robbins",
+    "email": "dave.robbins@uperform.com",
+    "url": "https://github.com/drobbins-ancile"
+  },
+  "metadata": {
+    "description": "A collection of plugins and agents for development, documentation, and code review workflows using Claude.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "python-development",
+      "source": "./plugins/python-development",
+      "description": "A plugin for Python development tasks including code generation, debugging, and testing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Dave Robbins",
+        "url": "https://github.com/drobbins-ancile"
+      },
+      "homepage": "https://github.com/drobbins-ancile/claude_code_plugins",
+      "repository": "https://github.com/drobbins-ancile/claude_code_plugins",
+      "license": "MIT",
+      "keywords": [
+        "python",
+        "fastapi",
+        "async",
+        "backend"
+      ],
+      "category": "languages",
+      "strict": false,
+      "commands": [
+        "./commands/brainstorm.md",
+        "./commands/plan.md"
+      ],
+      "agents": [
+        "./agents/python-pro.md",
+        "./agents/python-tester.md",
+        "./agents/documentation-specialist.md"
+      ],
+      "hooks": "./hooks/hooks.json",
+      "mcpServers": "./mcp.json"
+    }
+  ]
+}
